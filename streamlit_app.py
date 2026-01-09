@@ -11,7 +11,12 @@ stage = st.selectbox(
     "推論レベルを選択",
     ["Stage1-2（従来AI）", "Stage3", "Stage4", "Stage5"]
 )
-
+st.caption("""
+Stage1-2: 表層的事実・結果のみ  
+Stage3: 意図や前提の推定  
+Stage4: 視点差・暗黙了解の補完  
+Stage5: 文脈共有失敗の構造理解
+""")
 st.subheader("解釈")
 
 if stage == "Stage1-2（従来AI）":
