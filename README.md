@@ -1,5 +1,5 @@
 # subject-inference-demo
-Streamlit demo app for demonstrating staged subject inference and clarification in dialogue AI.
+対話AIにおける段階的な主語推論と明確化をデモンストレーションするためのStreamlitデモアプリ。
 
 ## How to Read the Demo
 1. 同一の例文を固定したままStageを切り替える
