@@ -2,6 +2,16 @@ import streamlit as st
 
 st.title("文脈推定デモ（A例文）")
 
+context_type = st.selectbox(
+    "文脈タイプを選択",
+    [
+        "暗黙期待型",
+        "時間参照型",
+        "視点依存型",
+        "指示語参照型"
+    ]
+)
+
 st.subheader("例文")
 st.write(
     "洗剤を買ってきてと頼まれたので買ってきて渡したら、相手は不服そうにしていた。"
