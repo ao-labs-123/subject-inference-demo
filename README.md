@@ -32,3 +32,5 @@
 
 - B：感情・対人配慮を含む文脈
 - C：社会的・制度的文脈
+
+[インタラクティブデモ（Streamlit）](https://share.streamlit.io/)
