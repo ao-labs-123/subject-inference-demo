@@ -111,6 +111,15 @@ Stage4：視点差・暗黙了解の補完
 Stage5：文脈共有失敗の構造理解  
 """)
 
+context_descriptions = {
+    "暗黙期待型": "共有されていると思っていた期待がズレている文脈",
+    "時間参照型": "時間表現の基準が話者ごとに異なる文脈",
+    "視点依存型": "立場や視点の違いで解釈が変わる文脈",
+    "指示語参照型": "指示語の参照先が曖昧な文脈"
+}
+
+st.caption(context_descriptions[context_type])
+
 st.subheader("解釈")
 for line in DATA[context_type]["stages"][stage]:
     st.write(f"・{line}")
