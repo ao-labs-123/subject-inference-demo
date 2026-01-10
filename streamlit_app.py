@@ -112,14 +112,14 @@ Stage5：文脈共有失敗の構造理解
 """)
 
 context_descriptions = {
-    "暗黙期待型": "共有されていると思っていた期待がズレている文脈",
-    "時間参照型": "時間表現の基準が話者ごとに異なる文脈",
-    "視点依存型": "立場や視点の違いで解釈が変わる文脈",
-    "指示語参照型": "指示語の参照先が曖昧な文脈"
+    "暗黙期待型": "相手が明示していない期待や前提を推定する文脈",
+    "時間参照型": "時間の基準や解釈のズレを補正する文脈",
+    "視点依存型": "話者ごとの立場・方向・視点の違いを考慮する文脈",
+    "指示語参照型": "これ・それ・あれ等の対象を文脈から特定する"
 }
-st.write(context_descriptions[context_type])
 
-st.caption(context_descriptions[context_type])
+st.markdown("### 文脈タイプの説明")
+st.write(context_descriptions[context_type])
 
 st.subheader("解釈")
 for line in DATA[context_type]["stages"][stage]:
