@@ -117,6 +117,7 @@ context_descriptions = {
     "視点依存型": "立場や視点の違いで解釈が変わる文脈",
     "指示語参照型": "指示語の参照先が曖昧な文脈"
 }
+st.write(context_descriptions[context_type])
 
 st.caption(context_descriptions[context_type])
 
