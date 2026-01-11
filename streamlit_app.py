@@ -84,7 +84,10 @@ DATA = {
 # UI
 # =========================
 context_type = st.selectbox("文脈タイプを選択", DATA.keys())
-stage = st.selectbox("推論レベルを選択", DATA[context_type]["stages"].keys())
+stage = st.radio(
+    "推論ステージを選択",
+    ["Stage1", "Stage2", "Stage3", "Stage4", "Stage5"]
+)
 
 context_descriptions = {
     "暗黙期待型": "相手が明示していない期待や前提を推定する文脈",
