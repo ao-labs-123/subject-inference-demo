@@ -125,6 +125,24 @@ sentence = st.selectbox(
     examples[context_type]
 )
 
+interpretations = {
+    "暗黙期待型": 
+    "明示されていない期待が存在していた可能性が高い。"
+    "話し手は条件を言語化しておらず、受け手は指示通り行動しているため、"
+    "責任の所在は受け手にはない。"
+}
+
+st.markdown("### 文脈解釈")
+st.write(interpretations[context_type])
+
+follow_up_questions = {
+    "暗黙期待型": 
+    "特定の条件やイメージを想定されていましたか？"
+}
+
+st.markdown("### AIによる聞き返し")
+st.write(follow_up_questions[context_type])
+
 context_descriptions = {
     "暗黙期待型": "相手が明示していない期待や前提を推定する文脈",
     "時間参照型": "時間の基準や解釈のズレを補正する文脈",
