@@ -101,11 +101,6 @@ DATA = {
 context_type = st.selectbox("文脈タイプを選択", DATA.keys())
 stage = st.selectbox("推論レベルを選択", DATA[context_type]["stages"].keys())
 
-context_type = st.selectbox(
-    "文脈タイプを選択",
-    ["暗黙期待型", "時間参照型", "視点依存型", "指示語参照型"]
-)
-
 context_descriptions = {
     "暗黙期待型": "相手が明示していない期待や前提を推定する文脈",
     "時間参照型": "時間の基準や解釈のズレを補正する文脈",
