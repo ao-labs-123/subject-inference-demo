@@ -101,6 +101,21 @@ DATA = {
 context_type = st.selectbox("文脈タイプを選択", DATA.keys())
 stage = st.selectbox("推論レベルを選択", DATA[context_type]["stages"].keys())
 
+context_type = st.selectbox(
+    "文脈タイプを選択",
+    ["暗黙期待型", "時間参照型", "視点依存型", "指示語参照型"]
+)
+
+context_descriptions = {
+    "暗黙期待型": "相手が明示していない期待や前提を推定する文脈",
+    "時間参照型": "時間の基準や解釈のズレを補正する文脈",
+    "視点依存型": "話者ごとの立場・方向・視点の違いを考慮する文脈",
+    "指示語参照型": "これ・それ・あれ等の対象を文脈から特定する"
+}
+
+st.markdown("### 文脈タイプの説明")
+st.write(context_descriptions[context_type])
+
 st.subheader("例文")
 st.write(DATA[context_type]["example"])
 
@@ -142,16 +157,6 @@ follow_up_questions = {
 
 st.markdown("### AIによる聞き返し")
 st.write(follow_up_questions[context_type])
-
-context_descriptions = {
-    "暗黙期待型": "相手が明示していない期待や前提を推定する文脈",
-    "時間参照型": "時間の基準や解釈のズレを補正する文脈",
-    "視点依存型": "話者ごとの立場・方向・視点の違いを考慮する文脈",
-    "指示語参照型": "これ・それ・あれ等の対象を文脈から特定する"
-}
-
-st.markdown("### 文脈タイプの説明")
-st.write(context_descriptions[context_type])
 
 st.subheader("解釈")
 for line in DATA[context_type]["stages"][stage]:
