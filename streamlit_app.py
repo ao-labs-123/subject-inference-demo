@@ -111,9 +111,6 @@ context_descriptions = {
 st.markdown("### 文脈タイプの説明")
 st.write(context_descriptions[context_type])
 
-st.subheader("例文")
-st.write(DATA[context_type]["example"])
-
 st.caption("""
 Stage1-2：表層的事実・結果のみ  
 Stage3：意図・前提の推定  
